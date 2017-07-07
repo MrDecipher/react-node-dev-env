@@ -1,7 +1,7 @@
 const webpack = require("webpack");
 const path = require('path');
 const buildDir = path.resolve(__dirname, "./src/srcBuild/javascript");
-const appDir = path.resolve(__dirname, "./src/production");
+const appDir = path.resolve(__dirname, "./src/production/js");
 
 module.exports = {
     devtool: "source-map",
