@@ -1,4 +1,4 @@
 node_modules
 package-lock.json
-src/public/bundle.js
-src/public/bundle.js.map
+src/production/css
+src/production/*js
