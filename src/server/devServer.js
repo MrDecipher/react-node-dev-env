@@ -1,8 +1,9 @@
 const express = require("express");
 const app = express();
+
+// ======================= Webpack Requirements ================================
 const webpack = require("webpack");
-// ====================== Webpack Requirements ================================
-const webpackConfig = require("../../webpack.config.dev.js");
+const webpackConfig = require("../../webpack.config.js");
 const compiler = webpack(webpackConfig);
 const webpackMiddleware = require("webpack-dev-middleware");
 
@@ -14,9 +15,7 @@ app.use(express.static(path.join(__dirname, "../production")));
 app.use(webpackMiddleware(compiler, {
     noInfo: false,
     publicPath: webpackConfig.output.publicPath,
-    stats: {
-        colors: true
-    }
+    stats: { colors: true }
 }));
 
 app.get("/", (req, res) => {

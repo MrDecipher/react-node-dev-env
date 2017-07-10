@@ -8,6 +8,7 @@ module.exports = {
     entry: buildDir + "/app.js",
     output: {
         path: appDir,
+        publicPath: "http://localhost:8080/js", //Url for JS files
         filename: "bundle.js"
     },
     module: {

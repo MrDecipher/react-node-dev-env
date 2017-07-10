@@ -1,7 +1,7 @@
 {
-  "name": "the-sterling-project",
+  "name": "react-node-dev-env",
   "version": "1.0.0",
-  "description": "",
+  "description": "A development environment for React Applications",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
