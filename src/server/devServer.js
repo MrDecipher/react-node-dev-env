@@ -24,5 +24,5 @@ app.get("/", (req, res) => {
 
 /*eslint-disable no-console*/
 app.listen(port, () => {
-    console.log("Sterling's server is listening on port: " + port);
+    console.log("Development server is listening on port: " + port);
 });
