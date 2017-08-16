@@ -34,9 +34,6 @@
     "babel-preset-react": "6.24.x",
     "eslint": "4.1.x",
     "eslint-watch": "3.1.x",
-    "gulp": "3.9.x",
-    "gulp-sass": "3.1.x",
-    "gulp-sourcemaps": "2.6.x",
     "webpack": "3.0.x",
     "webpack-dev-middleware": "1.11.x",
     "webpack-hot-middleware": "2.18.x"
