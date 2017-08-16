@@ -6,10 +6,12 @@
   "scripts": {
     "build:css": "npm run compile:sass & npm run lint:sass",
     "compile:sass": "node sassCompiler.js",
+    "compile:js": "node reactCompiler.js",
     "prelaunch": "npm run compile:sass",
     "launch": "node src/server/devServer.js",
     "lint:sass": "sass-lint -c .sass-lint.yml src/srcBuild/styles/**/*.scss -v -q",
     "lint:server": "esw -w src/server/*.js",
+    "lint:jscompiler": "eslint reactCompiler.js",
     "watch:css": "nodemon -e scss -x \"npm run build:css\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -33,14 +35,16 @@
   "devDependencies": {
     "babel-cli": "6.24.x",
     "babel-loader": "7.1.x",
-    "babel-preset-env": "1.6.x",
+    "babel-preset-env": "^1.6.0",
     "babel-preset-es2015": "6.24.x",
     "babel-preset-react": "6.24.x",
-    "chalk": "^2.1.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.4.0",
+    "chalk": "2.1.0",
     "eslint": "4.1.x",
     "eslint-watch": "3.1.x",
-    "node-sass": "^4.5.3",
-    "nodemon": "^1.11.0",
-    "sass-lint": "^1.10.2"
+    "node-sass": "4.5.x",
+    "nodemon": "1.11.x",
+    "sass-lint": "1.10.x"
   }
 }
