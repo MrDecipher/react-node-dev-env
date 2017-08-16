@@ -1,1 +1,1 @@
-### Sterling's Boutique
+### React Application Development Environment
