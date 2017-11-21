@@ -1,6 +1,6 @@
 {
-  "name": "react-node-dev-env",
-  "version": "1.0.0",
+  "name": "React-Dev-Env",
+  "version": "1.0.1",
   "description": "A development environment for React Applications",
   "main": "index.js",
   "scripts": {
