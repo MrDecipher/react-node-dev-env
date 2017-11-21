@@ -1,5 +1,5 @@
 {
-  "name": "React-Dev-Env",
+  "name": "React-Dev-Environment",
   "version": "1.0.1",
   "description": "A development environment for React Applications",
   "main": "index.js",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MrDecipher/react-node-dev-env.git"
+    "url": "git+https://github.com/MrDecipher/React-Dev-Environment.git"
   },
   "keywords": [],
   "author": "Japheth Ishola",
