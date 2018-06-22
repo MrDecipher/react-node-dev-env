@@ -1,4 +1,4 @@
 node_modules
 bower_components
-src/production/css
-src/production/js
+dist/css
+dist/js
