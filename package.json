@@ -1,19 +1,15 @@
 {
   "name": "React-Dev-Environment",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A development environment for React Applications",
   "main": "index.js",
   "scripts": {
-    "build:css": "npm run lint:sass & npm run compile:sass",
-    "build:js": "npm run lint:react & npm run compile:js",
-    "compile:sass": "node sassCompiler.js",
-    "compile:js": "webpack --mode development",
+    "lint:all": "npm run lint:react & npm run lint:sass",
+    "build": "webpack --mode development",
     "start": "node ./tools/server/devServer.js",
-    "lint:react": "eslint src/srcBuild/javascript/app.js",
-    "lint:sass": "sass-lint -c .sass-lint.yml src/srcBuild/styles/**/*.scss -v -q",
-    "lint:server": "esw -w src/server/*.js",
-    "lint:jscompiler": "eslint reactCompiler.js",
-    "watch:css": "nodemon -e scss -x \"npm run build:css\"",
+    "lint:react": "eslint ./src/index.js",
+    "lint:sass": "sass-lint -c .sass-lint.yml ./src/styles/**/*.scss -v -q",
+    "lint:server": "esw -w src/tools/server/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,11 +18,11 @@
   },
   "keywords": [],
   "author": "Japheth Ishola",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MrDecipher/react-node-dev-env/issues"
+    "url": "https://github.com/MrDecipher/React-Dev-Environment/issues"
   },
-  "homepage": "https://github.com/MrDecipher/react-node-dev-env#readme",
+  "homepage": "https://github.com/MrDecipher/React-Dev-Environment#readme",
   "dependencies": {
     "express": "^4.16.3",
     "react": "^16.4.1",
