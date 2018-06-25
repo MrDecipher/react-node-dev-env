@@ -1,5 +1,6 @@
 const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     entry: [ 
@@ -9,6 +10,10 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: "./css/styles.css",
+        }),
+        new HtmlWebPackPlugin({
+            title: "React Application Title",
+            template: "./src/index.html"
         })
     ],
     module: {
