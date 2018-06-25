@@ -8,5 +8,6 @@ module.exports = merge(common, {
     output: {
         path: path.resolve(__dirname, "./build"),
         filename: "./js/bundle.js"
-    }
+    },
+    watch: true
 });
