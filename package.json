@@ -11,7 +11,7 @@
     "start": "node ./tools/server/devServer.js",
     "lint:react": "eslint ./src/index.js",
     "lint:sass": "sass-lint -c .sass-lint.yml ./src/styles/**/*.scss -v -q",
-    "lint:server": "esw -w src/tools/server/*.js",
+    "lint:server": "esw -w ./tools/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,6 +27,7 @@
   "homepage": "https://github.com/MrDecipher/React-Dev-Environment#readme",
   "dependencies": {
     "express": "^4.16.3",
+    "history": "^4.7.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
