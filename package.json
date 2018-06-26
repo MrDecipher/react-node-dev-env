@@ -1,5 +1,5 @@
 {
-  "name": "React-Dev-Environment",
+  "name": "react-starter-pack",
   "version": "1.0.2",
   "description": "A development environment for React Applications",
   "main": "index.js",
@@ -16,15 +16,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MrDecipher/React-Dev-Environment.git"
+    "url": "git+https://github.com/MrDecipher/react-starter-pack.git"
   },
   "keywords": [],
   "author": "Japheth Ishola",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MrDecipher/React-Dev-Environment/issues"
+    "url": "https://github.com/MrDecipher/react-starter-pack/issues"
   },
-  "homepage": "https://github.com/MrDecipher/React-Dev-Environment#readme",
+  "homepage": "https://github.com/MrDecipher/react-starter-pack#readme",
   "dependencies": {
     "express": "^4.16.3",
     "history": "^4.7.2",
