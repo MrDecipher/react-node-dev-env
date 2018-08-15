@@ -1,20 +1,35 @@
+const path = require("path");
 const webpack = require("webpack");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+
+let pathsToClean = [
+    "./dist"
+]
 
 module.exports = {
     entry: [ 
         "./src/index.js",
         "./src/styles/styles.scss"
     ],
+    output: {
+        path: path.resolve(__dirname, "./dist"),
+        filename: "./js/bundle.min.js"
+    },
+    mode: "production",
     plugins: [
+        new CleanWebpackPlugin(pathsToClean),
         new HtmlWebPackPlugin({
             title: "React Application Title",
             template: "./src/index.html"
         }),
         new MiniCssExtractPlugin({
-            filename: "./css/styles.css",
-        })        
+            filename: "./css/styles.min.css",
+        }),
+        new webpack.HotModuleReplacementPlugin()   
     ],
     module: {
         rules: [
@@ -31,7 +46,7 @@ module.exports = {
                     },
                     {
                         loader: "css-loader",
-                        options: { sourceMap: true }
+                        options: { sourceMap: false }
                     },
                     {
                         loader: "postcss-loader",
@@ -39,15 +54,21 @@ module.exports = {
                             plugins: () => [
                                 require("autoprefixer")
                             ],
-                            sourceMap: true
+                            sourceMap: false
                         }
                     },
                     {
                         loader: "sass-loader",
-                        options: { sourceMap: true }
+                        options: { sourceMap: false }
                     }
                 ]
             }
+        ]
+    },
+    optimization: {
+        minimizer: [
+            new UglifyJsPlugin(),
+            new OptimizeCssAssetsPlugin({})
         ]
     }
 };
